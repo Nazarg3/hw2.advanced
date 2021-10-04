@@ -10,14 +10,11 @@ do{
 }while(!Number.isInteger(numM) || (numM < numN));
 
 
-const getEvenNumber = confirm("Пропускаємо парні числа?");
+const skipEvenNumbers = confirm("Пропускаємо парні числа?");
 
 let sum = 0;
 for(let i = numN; i <= numM; i++){
-    if(getEvenNumber){ 
-        if(i % 2 !== 0){
-            sum += i;
-        }
+    if(skipEvenNumbers && i % 2 !== 0){
     } else {
         sum += i;
     }
